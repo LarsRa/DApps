@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Banking Account</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="web3.js"></script>
+    <script src="jquery.js"></script>
+    <script src="bundle.js"></script>
+    <script src="bank.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Banking Account</h1>
+        <h1 id="accAddress" style="font-size: medium;">no address</h1>
+        <div class="formcontainer">
+            <hr />
+            <div class="container" style="background-color: #eee">
+                <label style="padding-left: 15px">
+                    Balance: <span id="balance">---</span>
+                </label>
+            </div>
+            <hr />
+            <div class="container">
+                <label for="amount"><strong>Amount</strong></label>
+                <input type="number" placeholder="Enter amount" name="amount" id="amount">
+                <button onclick="depositEther()">Deposit</button>
+                <button onclick="withdrawEther()">Withdraw</button>
+            </div>
+            <hr />
+            <div class="container">
+                <h3>Sending ether</h3>
+                <label for="addressTo"><strong>Address</strong></label>
+                <input type="text" placeholder="Enter recipient address to send" name="addressTo" id="addressTo">
+                <label for="sendAmount"><strong>Amount</strong></label>
+                <input type="number" placeholder="Enter amount" name="sendAmount" id="sendAmount">
+                <button onclick="sendEther()">Send</button>
+            </div>
+            <hr />
+            <div class="container" id="adminSection" hidden>
+                <h3>Admin section</h3>
+                <label for="addressLock"><strong>Address</strong></label>
+                <input type="text" placeholder="Enter users address" name="addressLock" id="addressLock">
+                <button onclick="lockUser()" style="background-color: red;">Lock</button>
+                <button onclick="unlockUser()">Unlock</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
